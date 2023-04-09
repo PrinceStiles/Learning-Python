@@ -13,25 +13,42 @@ mylist = [0, 1, "two", 3.2, False]
 mytuple = (0, 1, 2)
 mydict = {"one" : 1, "two" : 2}
 
-print(myint)
-print(myfloat)
-print(mystr)
-print(mybool)
-print(mylist)
-print(mytuple)
-print(mydict)
+# print(myint)
+# print(myfloat)
+# print(mystr)
+# print(mybool)
+# print(mylist)
+# print(mytuple)
+# print(mydict)
 
 # re-declaring a variable works
+myint = "Hello"
+print(myint)
 
 # to access a member of a sequence type, use []
+print(mytuple[2])
+print(mylist[4])
 
 # use slices to get parts of a sequence
+print(mylist[2:5])
+print(mylist[1:5:2]) 
 
 # you can use slices to reverse a sequence
+print(mylist[::-1])
+print(mytuple[::-1])
 
 # dictionaries are accessed via keys
+print(mydict["two"])
 
 # ERROR: variables of different types cannot be combined
+print(myint + str(123))
 
 # Global vs. local variables in functions
 
+def someFunc():
+    # global mystr
+    mystr = "function"
+    print(mystr)
+
+someFunc()
+print(mystr)
